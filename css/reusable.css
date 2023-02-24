@@ -1,0 +1,86 @@
+.c-grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+}
+
+.c-grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.c-grid--center-v {
+  align-items: center;
+}
+
+#c-grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#c-grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+#c-grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+.btn:link,
+.btn:visited {
+  display: inline-block;
+
+  text-decoration: none;
+
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 150px;
+  /*animation*/
+  /* transition: background-color 0.03s; */
+  transition: all 0.03s;
+}
+
+#heading-primary,
+#heading-secondary,
+#heading-tertiary {
+  font-weight: 700;
+  /* color: #333; */
+  /* color: #332603; */
+  color: #4c3905;
+  letter-spacing: -0.5px;
+}
+
+.spacing-margin-right {
+  margin-right: 1.6rem !important;
+}
+.spacing-margin-bottom {
+  margin-bottom: 4.8rem !important ;
+}
+.center-text {
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  gap: 1.6rem;
+  flex-direction: column;
+}
+
+.list-items {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-items span {
+  font-size: 1.8rem;
+}
+#list-icon {
+  height: 3rem;
+  width: 3rem;
+  color: #e5ab0e;
+}
+
+.lists-border {
+  padding-bottom: 1.2rem;
+
+  border-bottom: 1px solid #99999967;
+}
