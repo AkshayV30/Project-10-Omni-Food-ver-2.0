@@ -1,3 +1,4 @@
 FROM nginx
-COPY ./ /usr/app
-WORKDIR "/usr/app"
+COPY . /usr/share/nginx/html/
+WORKDIR "/usr/share/nginx/html/"
+EXPOSE 80 
