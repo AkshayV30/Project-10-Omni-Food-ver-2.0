@@ -1,3 +1,8 @@
+*:focus {
+  outline: none; /* it will remove the accesabilty focus state*/
+  /* outline: 2px dotted #e5ab0e; */
+  box-shadow: inset 0 0 0 0.2rem #00000067;
+}
 .c-grid {
   display: grid;
   row-gap: 9.6rem;
@@ -22,30 +27,80 @@
 #c-grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
 }
+#c-grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
 
   text-decoration: none;
 
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  padding: 1.6rem 3.2rem;
-  border-radius: 150px;
+  padding: 1.2rem;
+  border-radius: 10rem;
   /*animation*/
   /* transition: background-color 0.03s; */
   transition: all 0.03s;
+
+  /* button form */
+  border: none;
+  cursor: pointer;
 }
 
+.btn--form {
+  background-color: #4c3905;
+  color: #fdfdfe;
+
+  align-self: end;
+  padding: 1.2rem;
+}
+.btn--form:hover {
+  background-color: #fff;
+  color: #666;
+}
+/*-----------------------------------*/
+/*                                   */
+/*-----------------------------------*/
 #heading-primary,
 #heading-secondary,
 #heading-tertiary {
   font-weight: 700;
-  /* color: #333; */
-  /* color: #332603; */
+
   color: #4c3905;
   letter-spacing: -0.5px;
 }
+
+#heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+#heading-secondary {
+  font-size: 4.4rem;
+  margin-bottom: 9.6rem;
+}
+#heading-tertiary {
+  font-size: 2.4rem;
+  margin: 2.4rem 0;
+  line-height: 1.2;
+}
+#sub-heading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  color: #e5ab0e;
+  letter-spacing: 0.8px;
+}
+/*-----------------------------------*/
+/*                                   */
+/*-----------------------------------*/
 
 .spacing-margin-right {
   margin-right: 1.6rem !important;
@@ -56,7 +111,9 @@
 .center-text {
   text-align: center;
 }
-
+/*-----------------------------------*/
+/*                                   */
+/*-----------------------------------*/
 .list {
   list-style: none;
   display: flex;
@@ -73,14 +130,9 @@
 .list-items span {
   font-size: 1.8rem;
 }
-#list-icon {
-  height: 3rem;
-  width: 3rem;
-  color: #e5ab0e;
-}
 
 .lists-border {
   padding-bottom: 1.2rem;
 
-  border-bottom: 1px solid #99999967;
+  border-bottom: 2px solid #0000002a;
 }

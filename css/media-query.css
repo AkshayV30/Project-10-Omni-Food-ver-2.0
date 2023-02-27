@@ -1,0 +1,354 @@
+/*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+      MAIN COLOR:  #e67e22
+      main color -2 : #FEBE10
+*/
+/*-----------------------------------*/
+/* Media query */
+/* 1rem =1em = 16px not the default value of html */
+
+@media (max-width: 85.38rem) /*1366px*/ {
+  html {
+    font-size: 85.5%;
+  }
+
+  .header {
+    padding: 3.2rem;
+  }
+
+  .delivered-txt {
+    font-size: 1rem;
+  }
+
+  .delivered-img img {
+    height: 3.6rem;
+    width: auto;
+  }
+
+  .section-works {
+    padding: 3.6rem;
+  }
+
+  .meal-content {
+    padding: 1.6rem;
+  }
+
+  .meal-tag {
+    font-size: 1rem;
+  }
+  .c-grid {
+    column-gap: 3.2rem;
+  }
+  #meal-title {
+    text-align: center;
+    margin-top: 3.6rem;
+    margin-bottom: 2.4rem;
+    font-size: 1.8rem;
+  }
+  #heading-tertiary {
+    font-size: 2rem;
+  }
+
+  .list-items span {
+    font-size: 1.6rem;
+  }
+
+  #heading-secondary {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+
+  .section-pricing {
+    padding: 3.6rem;
+  }
+  .plan-card {
+    padding: 2.4rem;
+  }
+
+  .plan-card--complete::after {
+    top: 5%;
+    right: -14%;
+  }
+
+  .callToAction {
+    height: 40rem;
+  }
+
+  .callToAction-txt-box {
+    padding: 2.4rem 3.6rem;
+  }
+
+  #callToAction-txt {
+    font-size: 1.4rem;
+    text-align: justify;
+    margin-bottom: 1.6rem;
+  }
+
+  .callToAction-form {
+    column-gap: 1.6rem;
+  }
+
+  .callToAction-form label {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 80rem) /*1280px*/ {
+  .section-callToAction {
+    padding: 4.8rem;
+  }
+}
+
+@media (max-width: 64rem) /*1024px*/ {
+  html {
+    font-size: 75.5%;
+  }
+
+  .header {
+    padding: 1.6rem;
+  }
+
+  .main-nav-list {
+    gap: 2.4rem;
+  }
+
+  .section-meals {
+    padding: 6.4rem;
+  }
+
+  #heading-secondary {
+    margin-bottom: 6.4rem;
+  }
+
+  .testimonial-container {
+    padding: 3.6rem;
+  }
+
+  .testimonials {
+    row-gap: 3.6rem;
+    column-gap: 4.8rem;
+  }
+
+  .callToAction-txt-box {
+    padding: 2.4rem 1.6rem 1.6rem 1.6rem;
+  }
+
+  .callToAction-form input,
+  .callToAction-form select {
+    padding: 0.8rem;
+    font-size: 1.4rem;
+  }
+
+  .btn--form {
+    padding: 0.8rem;
+    width: 80%;
+  }
+}
+@media (max-width: 45rem) /*720*/ {
+  html {
+    font-size: 55.5%;
+  }
+  .header {
+    padding: 0.8rem;
+  }
+  .main-nav-list {
+    gap: 1.2rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-txt {
+    text-align: center;
+  }
+
+  .delivered-meals {
+    justify-content: center;
+  }
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    padding: 2.4rem;
+  }
+
+  #step-number {
+    font-size: 6.4rem;
+  }
+
+  .section-meals {
+    padding: 2.4rem;
+  }
+
+  .section-pricing {
+    padding: 4.8rem;
+  }
+
+  .plan-card {
+    width: 100%;
+  }
+  .callToAction {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .callToAction-form {
+    grid-template-columns: 1fr;
+  }
+
+  #callToAction-txt {
+    margin-bottom: 1.6rem;
+    font-size: 1.2rem;
+  }
+
+  .callToAction #heading-secondary {
+    margin-bottom: 1.2rem;
+  }
+
+  .callToAction-form label {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+  }
+
+  .btn--form {
+    margin-top: 1.2rem;
+  }
+
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .main-nav {
+    background-color: rgb(217, 255, 0); /*temp*/
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.5s ease-out;
+    transform: translateX(100%) translatey(-100%);
+
+    /* hide it  visually*/
+    opacity: 0;
+
+    /*makeing it not accessible to mouse and keyboard  */
+    pointer-events: none;
+
+    /* hding it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+
+    pointer-events: auto;
+
+    visibility: visible;
+
+    /* transform: translateX(00%) translatey(0%); */
+  }
+  .nav-open #icon-mobile-nav[name="close"] {
+    display: block;
+  }
+
+  .nav-open #icon-mobile-nav[name="menu"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 5.2rem;
+  }
+  #meal-attribute {
+    font-size: 1.6rem;
+    gap: 1.4rem;
+  }
+  #meal-icon {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  #list-icon {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  #c-grid--3-cols,
+  #c-grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diets {
+    grid-column: 1 / -1;
+    justify-self: center;
+    /* border: none; */
+    padding: 1rem;
+    width: 35%;
+  }
+
+  .footer {
+    padding: 9.6rem 4.8rem;
+  }
+  #grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  #nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+
+  .logos-col,
+  .address-col {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 23.44rem) /*375*/ {
+  html {
+    font-size: 30.5%;
+  }
+  .header {
+    padding: 0rem 2.4rem;
+  }
+  .c-grid {
+    gap: 3.2rem;
+  }
+  #c-grid--2-cols,
+  #c-grid--3-cols,
+  #c-grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 0;
+    justify-content: center;
+  }
+
+  .section-hero {
+    padding: 2.4rem;
+  }
+  #heading-primary {
+    font-size: 3.6rem;
+  }
+  #hero-img {
+    width: 50%;
+  }
+}

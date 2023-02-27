@@ -3,12 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- For resposive webpage this meta tag is required -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Omni Food 2.0</title>
 
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/reusable.css" />
+    <link rel="stylesheet" href="./css/media-query.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
     </style>
@@ -24,15 +27,31 @@
   </head>
   <body>
     <header class="header">
-      <img id="logo" src="/img/omnifood-logo.png" alt="omnifood-logo" />
+      <a href="#">
+        <img id="logo" src="/img/omnifood-logo.png" alt="omnifood-logo"
+      /></a>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#">sec 1</a></li>
-          <li><a class="main-nav-link" href="#">sec 2</a></li>
-          <li><a class="main-nav-link" href="#">sec 3</a></li>
-          <li><a class="main-nav-link" id="nav-cta" href="#">sec 4</a></li>
+          <li>
+            <a class="main-nav-link" href="#works">How it works</a>
+          </li>
+          <li><a class="main-nav-link" href="#meals">Meals</a></li>
+          <li>
+            <a class="main-nav-link" href="#testimonials">Testimonials</a>
+          </li>
+          <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
+          <li>
+            <a class="main-nav-link" id="nav-cta" href="#callToAction"
+              >Try for Free</a
+            >
+          </li>
         </ul>
       </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon id="icon-mobile-nav" name="menu"></ion-icon
+        ><ion-icon id="icon-mobile-nav" name="close"></ion-icon>
+      </button>
     </header>
     <main>
       <section class="section-hero">
@@ -65,7 +84,7 @@
               <img src="/img/customers/customer-5.jpg" alt="" />
             </div>
             <div class="delivered-txt">
-              Delivered <span> 250,000+ </span>meals last year!
+              Delivered <span> 250,000 <sup> + </sup></span>meals last year!
             </div>
           </div>
         </div>
@@ -89,7 +108,7 @@
         </div>
       </section>
 
-      <section class="section-works">
+      <section class="section-works" id="works">
         <div class="container">
           <span id="sub-heading"> How It Works </span>
           <h2 id="heading-secondary">
@@ -97,10 +116,10 @@
           </h2>
         </div>
 
-        <div class="container c-grid c-grid--center-v" id="c-grid--2-cols">
+        <div class="c-grid c-grid--center-v" id="c-grid--2-cols">
           <div class="step-text-box">
             <span id="step-number"> 01</span>
-            <h3 id="heading-tertiary">Tell us what you like (and what not)</h3>
+            <h3 id="heading-tertiary">Tell us what you like</h3>
             <p id="step-description">
               Never again waste time thinking about what to eat! Omnifood AI
               will create a 100% personalized weekly meal plan just for you. It
@@ -143,11 +162,11 @@
         </div>
       </section>
 
-      <section class="section-meals">
+      <section class="section-meals" id="meals">
         <div class="container center-text">
           <span id="sub-heading"> Meals </span>
           <h2 id="heading-secondary">
-            Omnifood AI chooses from 5,000+ recipes
+            Omnifood AI chooses from 5,000 <sup>+</sup> Recipes
           </h2>
         </div>
 
@@ -211,59 +230,60 @@
             </div>
           </div>
 
-          <div class="diets">
+          <div class="diets diet-border">
             <h3 id="heading-tertiary">Works with Any Diet</h3>
             <ul class="list">
-              <li id="list-items">
+              <li class="list-items">
                 <ion-icon
                   id="list-icon"
                   name="checkmark-circle-outline"
                 ></ion-icon>
                 <span> Vegetarian</span>
               </li>
-              <li id="list-items">
+
+              <li class="list-items">
                 <ion-icon
                   id="list-icon"
                   name="checkmark-circle-outline"
                 ></ion-icon>
                 <span> Vegan</span>
               </li>
-              <li id="list-items">
+              <li class="list-items">
                 <ion-icon
                   id="list-icon"
                   name="checkmark-circle-outline"
                 ></ion-icon>
                 <span> Pescatarian</span>
               </li>
-              <li id="list-items">
+              <li class="list-items">
                 <ion-icon
                   id="list-icon"
                   name="checkmark-circle-outline"
                 ></ion-icon>
                 <span> Gluten-free</span>
               </li>
-              <li id="list-items">
+              <li class="list-items">
                 <ion-icon
                   id="list-icon"
                   name="checkmark-circle-outline"
                 ></ion-icon>
                 <span> Keto</span>
               </li>
-              <li id="list-items">
+              <li class="list-items">
                 <ion-icon
                   id="list-icon"
                   name="checkmark-circle-outline"
                 ></ion-icon>
                 <span> Paleo</span>
               </li>
-              <li id="list-items">
+              <li class="list-items">
                 <ion-icon
                   id="list-icon"
                   name="checkmark-circle-outline"
                 ></ion-icon>
                 <span> Low FODMAP</span>
               </li>
-              <li id="list-items">
+              <li class="list-items">
                 <ion-icon
                   id="list-icon"
                   name="checkmark-circle-outline"
@@ -279,17 +299,18 @@
         </div>
       </section>
 
-      <section class="section-testimonials">
+      <section class="section-testimonials" id="testimonials">
         <div class="testimonial-container">
           <span id="sub-heading"> Testimonials </span>
           <h2 id="heading-secondary">
-            Once you try it! There's no going Back.
+            Try once! <br />
+            And there's No going Back.
           </h2>
 
           <div class="testimonials">
             <figure class="testimonial">
               <img
-                class="testimonial-img"
+                id="testimonial-img"
                 src="/img/customers/hannah.jpg"
                 alt="hannah"
               />
@@ -302,7 +323,7 @@
 
             <figure class="testimonial">
               <img
-                class="testimonial-img"
+                id="testimonial-img"
                 src="/img/customers/dave.jpg"
                 alt="dave"
               />
@@ -315,7 +336,7 @@
 
             <figure class="testimonial">
               <img
-                class="testimonial-img"
+                id="testimonial-img"
                 src="/img/customers/ben.jpg"
                 alt="ben"
               />
@@ -328,7 +349,7 @@
 
             <figure class="testimonial">
               <img
-                class="testimonial-img"
+                id="testimonial-img"
                 src="/img/customers/steve.jpg"
                 alt="steve"
               />
@@ -395,7 +416,7 @@
         </div>
       </section>
 
-      <section class="section-pricing">
+      <section class="section-pricing" id="pricing">
         <div class="container">
           <span id="sub-heading"> Pricing </span>
           <h2 id="heading-secondary">Eating Well without breaking the bank</h2>
@@ -526,6 +547,143 @@
           </div>
         </div>
       </section>
+
+      <section class="section-callToAction" id="callToAction">
+        <div class="container">
+          <div class="callToAction">
+            <div class="callToAction-txt-box">
+              <h2 id="heading-secondary">Your First Meal for Free!</h2>
+              <p id="callToAction-txt">
+                Healthy, tasty and hassle-free meals are waiting for you. Start
+                eating well today. You can cancel or pause anytime. And the
+                first meal is on us!
+              </p>
+
+              <form class="callToAction-form" action="#">
+                <div>
+                  <label for="full-name"> Full Name</label>
+                  <input
+                    id="full-name"
+                    type="text"
+                    placeholder="john smith"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="email"> Email</label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="abc@email.com"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="select-where"
+                    >From where you knew about us!</label
+                  >
+                  <select name="" id="select-where">
+                    <option value="Friends">Friends</option>
+                    <option value="Family">Family</option>
+                    <option value="Youtube">youtube</option>
+                  </select>
+                </div>
+                <button class="btn btn--form">Sign Up Now</button>
+              </form>
+            </div>
+            <div
+              class="callToAction-img-box"
+              role="img"
+              aria-label="women enjoying food"
+            ></div>
+            <!--div element cant be left empty when background image is use , 
+              therfore role and ar-label attribute is used for screen reader's          -->
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="c-grid" id="grid--footer">
+          <div class="logos-col">
+            <a href="#">
+              <img id="logo" src="/img/omnifood-logo.png" alt="omnifood-logo"
+            /></a>
+
+            <ul class="social-links">
+              <li>
+                <a href="https://www.instagram.com/"
+                  ><ion-icon name="logo-instagram"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/"
+                  ><ion-icon name="logo-facebook"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.twitter.com/"
+                  ><ion-icon name="logo-twitter"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.twitch.com/"
+                  ><ion-icon name="logo-twitch"></ion-icon
+                ></a>
+              </li>
+            </ul>
+
+            <p id="copyright">
+              Copyright <sup> &copy; </sup> 2027 by OmniFood inc., All rights
+              Reserved
+            </p>
+          </div>
+
+          <div class="address-col">
+            <p id="contacts-head">Contact Us</p>
+            <address id="contacts">
+              623 Harrison St., 2nd Floor, San Francisco, CA 94107
+            </address>
+            <p>
+              <a id="contacts-link" href="tel:415-201-6370">415-201-6370</a>
+              <br />
+              <a id="contacts-link" href="mailto:hello@omnifood.com"
+                >hello@omnifood.com</a
+              >
+            </p>
+          </div>
+
+          <nav id="nav-col">
+            <p id="contacts-head">Account</p>
+            <ul class="footer-nav">
+              <li><a href="#"> Create account </a></li>
+              <li><a href="#"> Sign in </a></li>
+              <li><a href="#"> iOS app </a></li>
+              <li><a href="#"> Android app</a></li>
+            </ul>
+          </nav>
+
+          <nav id="nav-col">
+            <p id="contacts-head">Company</p>
+            <ul class="footer-nav">
+              <li><a href="#"> About </a></li>
+              <li><a href="#"> Omnifood For Business </a></li>
+              <li><a href="#"> Cooking partners</a></li>
+              <li><a href="#"> Careers </a></li>
+            </ul>
+          </nav>
+          <nav id="nav-col">
+            <p id="contacts-head">Resources</p>
+            <ul class="footer-nav">
+              <li><a href="#"> Recipe directory</a></li>
+              <li><a href="#"> Help center</a></li>
+              <li><a href="#"> Privacy & terms</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
