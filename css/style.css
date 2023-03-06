@@ -8,6 +8,8 @@ html {
   /* 10px /16px = 0.625 || 16px is the default font size of desktop browser */
   /* in order to have fluid and responsive webpage are set to rem and % value instead of px  */
   font-size: 100%; /* considering for 1920px width*/
+  /* scroll animation */
+  /* scroll-behavior: smooth; */
 }
 
 body {
@@ -87,6 +89,21 @@ strong {
 #nav-cta:hover,
 #nav-cta:active {
   background-color: #e5ab0e;
+}
+/* Sticky */
+.sticky {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.4);
+  background-color: white;
 }
 
 .btn-mobile-nav {

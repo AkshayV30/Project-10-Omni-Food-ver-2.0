@@ -1,3 +1,4 @@
+# Things to do
 # manual step wwithout load balancing
 # create resources in ec2
 # install ami :amazon linux

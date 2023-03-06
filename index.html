@@ -7,6 +7,13 @@
     <!-- For resposive webpage this meta tag is required -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- adding favicon and meta description -->
+    <meta
+      name="description"
+      content="Omni food is all about resturant which serve  good delicious food."
+    />
+    <link rel="icon" href="./img/favicon.png" />
+
     <title>Omni Food 2.0</title>
 
     <link rel="stylesheet" href="./css/style.css" />
@@ -38,6 +45,8 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
+    <script defer src="./js/script.js"></script>
   </head>
   <body>
     <header class="header">
@@ -61,8 +70,8 @@
       </nav>
 
       <button class="btn-mobile-nav">
-        <ion-icon id="icon-mobile-nav" name="menu"></ion-icon
-        ><ion-icon id="icon-mobile-nav" name="close"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="menu"></ion-icon
+        ><ion-icon class="icon-mobile-nav" name="close"></ion-icon>
       </button>
     </header>
     <main>
@@ -648,8 +657,8 @@
             </ul>
 
             <p id="copyright">
-              Copyright <sup> &copy; </sup> 2027 by OmniFood inc., All rights
-              Reserved
+              Copyright <sup> &copy; </sup> <span id="year"> 2027</span> by
+              OmniFood inc., All rights Reserved
             </p>
           </div>
 

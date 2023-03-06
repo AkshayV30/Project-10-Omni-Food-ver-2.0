@@ -149,6 +149,7 @@
     width: 80%;
   }
 }
+
 @media (max-width: 45rem) /*720*/ {
   html {
     font-size: 55.5%;
@@ -221,10 +222,12 @@
 
   .btn-mobile-nav {
     display: block;
+    z-index: 9999;
   }
 
   .main-nav {
-    background-color: rgb(217, 255, 0); /*temp*/
+    background-color: rgba(217, 255, 0, 0.5); /*temp*/
+    backdrop-filter: blur(5px);
     position: absolute;
     top: 0;
     left: 0;
@@ -255,14 +258,15 @@
     pointer-events: auto;
 
     visibility: visible;
+    transform: translateX(0);
 
     /* transform: translateX(00%) translatey(0%); */
   }
-  .nav-open #icon-mobile-nav[name="close"] {
+  .nav-open .icon-mobile-nav[name="close"] {
     display: block;
   }
 
-  .nav-open #icon-mobile-nav[name="menu"] {
+  .nav-open .icon-mobile-nav[name="menu"] {
     display: none;
   }
 
@@ -326,7 +330,17 @@
     font-size: 30.5%;
   }
   .header {
-    padding: 0rem 2.4rem;
+    padding: 0rem 3.6rem;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 1rem;
+    font-size: 2.4rem;
+    margin-bottom: 1.2rem;
+
+    width: 40rem;
   }
   .c-grid {
     gap: 3.2rem;
@@ -348,7 +362,98 @@
   #heading-primary {
     font-size: 3.6rem;
   }
+
+  .hero-img-box {
+    display: flex;
+  }
   #hero-img {
-    width: 50%;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .delivered-img img {
+    height: 6.4rem;
+    width: 6.4rem;
+    margin-right: -2.8rem;
+  }
+
+  .delivered-txt {
+    font-size: 1.8rem;
+  }
+
+  .heading-branding {
+    font-size: 1.4rem;
+  }
+
+  .branding-logos img {
+    height: 1.8rem;
+  }
+
+  #sub-heading {
+    font-size: 1.8rem;
+  }
+
+  .step-image-box:nth-child(2) {
+    grid-row: 1;
+  }
+  .step-image-box:nth-child(6) {
+    grid-row: 5;
+  }
+
+  .step-img-box {
+    transform: translateY(2.4rem);
+  }
+
+  .meal-card {
+    margin: 4.8rem 9.6rem;
+  }
+
+  .meal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .meal-tag {
+    font-size: 1.8rem;
+    padding: 0.8rem 1.6rem;
+  }
+  #meal-title {
+    font-size: 3.6rem;
+  }
+  #meal-attribute {
+    font-size: 2rem;
+  }
+  #meal-icon,
+  #list-icon {
+    height: 2.8rem;
+    width: 2.8rem;
+  }
+  .list-items span {
+    font-size: 2rem;
+  }
+  #heading-tertiary {
+    font-size: 3.6rem;
+  }
+  .diets {
+    width: fit-content;
+    padding: 2.4rem;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  #testimonial-txt {
+    font-size: 1.4rem;
+  }
+  #testimonial-name {
+    font-size: 1.8rem;
+  }
+  .callToAction {
+    grid-template-columns: 1fr;
+  }
+  .callToAction-img-box {
+    height: 24rem;
+    grid-row: 1;
   }
 }
